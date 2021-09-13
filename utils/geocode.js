@@ -10,9 +10,13 @@ const geocode = (address, callback) => {
         }
         data = JSON.parse(body);
         //console.log(response);
+        if(data.features === undefined)
+        {
+           return callback('NOT FOUND');
+        }
         if (data.features.length === 0) {
 
-            callback('unable to find location');
+          return   callback('unable to find location');
 
         }
         else {
