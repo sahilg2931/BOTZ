@@ -30,6 +30,9 @@ client.on('message', msg => {
                 msg.reply(fdata.current.weather[0].description.toUpperCase());
                 msg.reply(" It is currently" + fdata.current.temp + " degree celcius outside");
                 msg.reply(" It feels like " + fdata.current.feels_like + " degree celcius though.")
+                msg.reply("dew_point: " + fdata.current.dew_point + " celsius.")
+                msg.reply("Visibility: " + fdata.current.visibility + " metres.")
+                msg.reply("humidity:" + fdata.current.humidity + "%");
                 msg.reply("**********");
                 if (fdata.alerts) {
                     msg.reply('THERE IS A NATIONAL ALERT FOR ' + data.location.toUpperCase());
